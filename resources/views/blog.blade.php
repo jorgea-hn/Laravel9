@@ -7,6 +7,7 @@
     <title>Blog</title>
 </head>
 <body>
+@include('partial.nav')
     Blog
 </body>
 </html>
