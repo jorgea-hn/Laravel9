@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 //personal-site.com/blog = blog
 //personal-site.com/about = about
 
-Route::view('/','welcome');
-Route::view('/contacto','contact');
-Route::view('/blog','blog');
-Route::view('/about','about');
+Route::view('/','welcome')->name("home");
+Route::view('/contacto','contact')->name("contact"); 
+Route::view('/blog','blog')->name("blog");
+Route::view('/about','about')->name("about");
 
 
