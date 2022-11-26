@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+
 
 
 // Route::get('/', function () {
@@ -15,9 +16,16 @@ use Illuminate\Support\Facades\Route;
 //personal-site.com/blog = blog
 //personal-site.com/about = about
 
+
+
+
 Route::view('/','welcome')->name("home");
-Route::view('/contacto','contact')->name("contact"); 
-Route::view('/blog','blog')->name("blog");
+Route::view('/contacto','contact')->name("contact");
+
+
+Route::get('/blog',[PostController::class,'index'])->name("blog");
+
+
 Route::view('/about','about')->name("about");
 
 
